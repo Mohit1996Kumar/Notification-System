@@ -147,7 +147,7 @@ public partial class Webpages_Default : System.Web.UI.Page
                     {
                         byte[] response = wb.UploadValues("https://api.textlocal.in/send/", new NameValueCollection()
                         {
-                        {"apikey" , "YYuFAJXURjA-IcD7yR2wFP50LFafuv9kXPDrbLOT6H"},
+                        {"apikey" , "YOUR API KEY"},
                         {"numbers" , destinationaddr1},
                         {"message" , message4},
                         {"sender" , "TXTLCL"}
