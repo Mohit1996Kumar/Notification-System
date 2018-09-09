@@ -93,13 +93,13 @@ public partial class Webpages_Default : System.Web.UI.Page
                     client.EnableSsl = true;
                     client.DeliveryMethod = SmtpDeliveryMethod.Network;
                     client.UseDefaultCredentials = false;
-                    client.Credentials = new NetworkCredential("mohit.singlapup@gmail.com", "mohit@1948869");
+                    client.Credentials = new NetworkCredential("YOUR EMAIL", "YOUR PASSWORD");
                     while (rd.Read())
                     {
                         //Email
                         MailMessage msg = new MailMessage();
                         msg.To.Add(rd["Email"].ToString());
-                        msg.From = new MailAddress("mohit.singlapup@gmail.com");
+                        msg.From = new MailAddress("YOUR EMAIL");
                         msg.Subject = TextBox2.Text;
                         msg.Body = TextBox1.Text;
 
@@ -109,7 +109,7 @@ public partial class Webpages_Default : System.Web.UI.Page
                         {
                             byte[] response = wb.UploadValues("https://api.textlocal.in/send/", new NameValueCollection()
                         {
-                        {"apikey" , "YYuFAJXURjA-IcD7yR2wFP50LFafuv9kXPDrbLOT6H"},
+                        {"apikey" , "YOUR API KEY"},
                         {"numbers" , destinationaddr},
                         {"message" , message1},
                         {"sender" , "TXTLCL"}
@@ -174,12 +174,12 @@ public partial class Webpages_Default : System.Web.UI.Page
                     client.EnableSsl = true;
                     client.DeliveryMethod = SmtpDeliveryMethod.Network;
                     client.UseDefaultCredentials = false;
-                    client.Credentials = new NetworkCredential("mohit.singlapup@gmail.com", "mohit@1948869");
+                    client.Credentials = new NetworkCredential("YOUR EMAIL", "YOUR PASSWORD");
                     while(rd.Read())
                     {  
                         MailMessage msg = new MailMessage();
                         msg.To.Add(rd["Email"].ToString());
-                        msg.From = new MailAddress("mohit.singlapup@gmail.com");
+                        msg.From = new MailAddress("YOUR EMAIL");
                         msg.Subject = TextBox2.Text;
                         msg.Body = TextBox1.Text;
                         client.Send(msg);
